@@ -34,7 +34,8 @@ body {
 
 /* 스크롤바 스타일링 */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
+  opacity: 0.5;
 }
 
 ::-webkit-scrollbar-track {
@@ -53,4 +54,19 @@ body {
 /* 플레이어 하단 여백 */
 .player-bottom-margin {
   margin-bottom: 80px;
+}
+
+.main-content-card {
+  @apply bg-black hover:bg-zinc-700/50 transition-colors rounded-md overflow-hidden border-none cursor-pointer w-[180px];
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
